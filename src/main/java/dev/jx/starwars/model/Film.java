@@ -1,5 +1,6 @@
 package dev.jx.starwars.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -9,11 +10,14 @@ import java.util.List;
 public class Film implements Serializable {
 
     private String title;
-    private Integer episode_id;
-    private String opening_crawl;
+    @JsonProperty("episode_id")
+    private Integer episodeId;
+    @JsonProperty("opening_crawl")
+    private String openingCrawl;
     private String director;
     private String producer;
-    private String release_date;
+    @JsonProperty("release_date")
+    private String releaseDate;
     private List<String> species;
     private List<String> starships;
     private List<String> vehicles;

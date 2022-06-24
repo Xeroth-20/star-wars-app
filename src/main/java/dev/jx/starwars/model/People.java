@@ -1,5 +1,6 @@
 package dev.jx.starwars.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,8 +12,10 @@ public class People implements Serializable {
     private String name;
     private String height;
     private String mass;
-    private String hair_color;
-    private String skin_color;
+    @JsonProperty("hair_color")
+    private String hairColor;
+    @JsonProperty("skin_color")
+    private String skinColor;
     private String url;
     private List<String> films;
     private List<String> vehicles;
@@ -20,8 +23,10 @@ public class People implements Serializable {
     private List<String> species;
     private String created;
     private String edited;
-    private String birth_year;
-    private String eye_color;
+    @JsonProperty("birth_year")
+    private String birthYear;
+    @JsonProperty("eye_color")
+    private String eyeColor;
     private String gender;
     private String homeworld;
 }
