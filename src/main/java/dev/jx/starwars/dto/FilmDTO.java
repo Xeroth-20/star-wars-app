@@ -23,6 +23,7 @@ public class FilmDTO implements Serializable {
         filmDTO.setId(extractId(film));
         filmDTO.setTitle(film.getTitle());
         filmDTO.setEpisodeId(film.getEpisodeId());
+        filmDTO.setSummary(film.getOpeningCrawl());
         filmDTO.setDirector(film.getDirector());
         filmDTO.setProducer(film.getProducer());
         filmDTO.setReleaseDate(LocalDate.parse(film.getReleaseDate()));
