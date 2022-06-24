@@ -11,12 +11,12 @@
         <link rel="icon" type="image/png" sizes="32x32" href="<c:url value='/images/favicon-32x32.png'/>"/>
         <link rel="icon" type="image/png" sizes="16x16" href="<c:url value='/images/favicon-16x16.png'/>"/>
         <link rel="manifest" href="<c:url value='/site.webmanifest'/>"/>
-        <title>${film.title} | Star Wars</title>
+        <title>Home | Stars Wars</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="<c:url value='/'/>">
+                <a class="navbar-brand active" href="<c:url value='/'/>">
                     <img class="d-inline-block align-top" src="<c:url value="/images/favicon-32x32.png"/>"
                          alt="brand" width="30" height="30"/>
                     Star Wars
@@ -31,14 +31,17 @@
                 </ul>
             </div>
         </nav>
-        <main class="container my-3">
-            <a class="btn btn-outline-primary mb-3" href="<c:url value='/films'/> ">Go back</a>
-            <h3 class="text-primary mb-0">${film.title}</h3>
-            <p class="text-muted">Episodio ${film.episodeId}</p>
-            <p>${film.summary}</p>
-            <p><span class="fw-bold">Director: </span>${film.director}</p>
-            <p><span class="fw-bold">Producer: </span>${film.producer}</p>
-            <p><span class="fw-bold">Release date: </span>${film.releaseDate}</p>
+        <main class="container my-4">
+            <div class="bg-light p-5 rounded">
+                <h1 class="display-4">Hello, Jedis!</h1>
+                <p class="lead">
+                    This is a simple example of a Star Wars Application.
+                </p>
+                <hr class="my-4">
+                <p>It uses an external Star Wars API for retrieving all films and characters.</p>
+                <a class="btn btn-primary" href="<c:url value='/films'/>">Explore films</a>
+                <a class="btn btn-primary" href="<c:url value='/people'/>">Explore characters</a>
+            </div>
         </main>
     </body>
 </html>

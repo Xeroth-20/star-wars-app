@@ -7,12 +7,20 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link type="text/css" rel="stylesheet" href="<c:url value='/css/bootstrap.css'/>"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="<c:url value='/images/apple-touch-icon.png'/>"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="<c:url value='/images/favicon-32x32.png'/>"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="<c:url value='/images/favicon-16x16.png'/>"/>
+        <link rel="manifest" href="<c:url value='/site.webmanifest'/>"/>
         <title>People | Stars Wars</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="<c:url value='/'/>">Star Wars</a>
+                <a class="navbar-brand" href="<c:url value='/'/>">
+                    <img class="d-inline-block align-top" src="<c:url value="/images/favicon-32x32.png"/>"
+                         alt="brand" width="30" height="30"/>
+                    Star Wars
+                </a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="<c:url value='/films'/>">Films</a>
