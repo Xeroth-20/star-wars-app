@@ -20,7 +20,7 @@ public class FilmDTO implements Serializable {
 
     public static FilmDTO fromModel(Film film) {
         FilmDTO filmDTO = new FilmDTO();
-        filmDTO.setId(extractIdFromModel(film));
+        filmDTO.setId(extractId(film));
         filmDTO.setTitle(film.getTitle());
         filmDTO.setEpisodeId(film.getEpisodeId());
         filmDTO.setDirector(film.getDirector());
@@ -30,12 +30,19 @@ public class FilmDTO implements Serializable {
         return filmDTO;
     }
 
-    private static int extractIdFromModel(Film film) {
+    static int extractId(Film film) {
         final URI url = URI.create(film.getUrl());
         String path = url.getPath();
         String[] pathParts = path.split("/");
         String id = pathParts[pathParts.length - 1];
 
         return Integer.parseInt(id);
+    }
+
+    static int extractId(String url) {
+        Film film = new Film();
+        film.setUrl(url);
+
+        return extractId(film);
     }
 }
